@@ -1,11 +1,13 @@
 import express from "express";
 import cors from "cors";
 import supplierRoutes from "./api/supplier.routes";
+import searchRoutes from "./api/search.routes";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(searchRoutes);
 
 app.get("/health", (_req, res) => {
     res.json({
