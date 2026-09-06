@@ -36,7 +36,7 @@ function App() {
 
     try {
       const startResponse = await fetch(
-        "https://hotel-price-comparator-production.up.railway.app/api/search-hotels", {
+        "https://hotel-price-comparator-production-3005.up.railway.app/api/search-hotels", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,7 +59,7 @@ function App() {
       setWorkflowId(id);
 
       const resultResponse = await fetch(
-        `https://hotel-price-comparator-production.up.railway.app/api/search-hotels/${id}`
+        `https://hotel-price-comparator-production-3005.up.railway.app/api/search-hotels/${id}`
       );
 
       const resultData = await resultResponse.json();
@@ -92,7 +92,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `https://hotel-price-comparator-production.up.railway.app/api/search-hotels/${workflowId}/cancel`, {
+        `https://hotel-price-comparator-production-3005.up.railway.app/api/search-hotels/${workflowId}/cancel`, {
         method: "POST",
       }
       );
