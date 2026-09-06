@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "start": "node dist/server.js",
-    "worker": "ts-node-dev --respawn --transpile-only ./src/temporal/worker.ts",
+    "worker": "node dist/temporal/worker.js",
     "build": "tsc"
   },
   "keywords": [],
@@ -27,5 +27,5 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   },
-  "worker": "ts-node-dev --respawn --transpile-only ./src/temporal/worker.ts"
+  "worker": "node dist/temporal/worker.js"
 }

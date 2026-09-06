@@ -5,7 +5,8 @@ import {
     SupplierResult,
 } from "../types/hotel";
 
-const SUPPLIER_BASE_URL = "http://localhost:3000";
+const SUPPLIER_BASE_URL =
+    process.env.SUPPLIER_BASE_URL || "http://localhost:3000";
 
 export async function fetchSupplierHotels(
     supplier: Supplier,
