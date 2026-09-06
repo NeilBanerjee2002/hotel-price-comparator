@@ -36,7 +36,7 @@ function App() {
 
     try {
       const startResponse = await fetch(
-        "http://localhost:3000/api/search-hotels",
+        "https://hotel-price-comparator.onrender.com/api/search-hotels",
         {
           method: "POST",
           headers: {
@@ -60,7 +60,7 @@ function App() {
       setWorkflowId(id);
 
       const resultResponse = await fetch(
-        `http://localhost:3000/api/search-hotels/${id}`
+        `https://hotel-price-comparator.onrender.com/api/search-hotels/${id}`
       );
 
       const resultData = await resultResponse.json();
@@ -93,7 +93,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/search-hotels/${workflowId}/cancel`,
+        `https://hotel-price-comparator.onrender.com/api/search-hotels/${workflowId}/cancel`,
         {
           method: "POST",
         }
